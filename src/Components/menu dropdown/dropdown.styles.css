@@ -1,0 +1,87 @@
+* {
+     padding: 0;
+     margin: 0;
+   }
+   
+   .menu-icon-div{
+     position: absolute;
+   }
+   
+   .menu {
+     width: max-content;
+     height: max-content;
+   }
+
+   
+   /* .category {
+     height: 30px;
+     width: 100px;
+     border: 1px solid white;
+     font-size: 18px;
+     margin-top: 230px;
+     color: #f37521;
+     border-radius: 5px;
+   }
+   .category:hover {
+     color: white;
+   }
+   .country {
+     height: 30px;
+     width: 100px;
+     border: 1px solid white;
+     background-color: #f37521;
+     margin: 10px;
+     color: white;
+     font-size: 18px;
+     border-radius: 5px;
+   } */
+   
+   .menu {
+     display: flex;
+     position: relative;
+     align-items: center;
+     font-size: 18px;
+     color: gray;
+     width: max-content;
+     height: max-content;
+     justify-content: center;
+     padding: 5px;
+     z-index: 1;
+   }
+   .divs {
+     display: grid;
+     grid-gap: 5px;
+     margin-left: 0rem;
+   }
+   
+   .div {
+     width: 20px;
+     border: 2px solid white;
+   }
+   .drop-down-div {
+     position: absolute;
+     display: none;
+     background-color: white;
+     font-size: 20px;
+     height: max-content;
+     width: 13vw;
+     top: 31px;
+     left: 0em;
+     text-align: left;
+     padding-top: 50px;
+     overflow: hidden;
+     background-color: white;
+     color: #3e7081;
+   }
+   .menu:hover .drop-down-div {
+     cursor: pointer;
+     display: block;
+   }
+   
+   .drop-down-list {
+     margin-bottom: 5px;
+     margin-top: 18px;
+     margin-right: 6rem;
+     margin-left: 10px;
+     font-weight: bold;
+   }

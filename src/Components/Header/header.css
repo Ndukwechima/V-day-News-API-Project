@@ -1,0 +1,24 @@
+*{
+     padding: 0;
+     margin: 0;
+}
+.parent_component{
+
+}
+.main_header{
+     /* background-color: #60a4b4; */
+      background-color: #32257a;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     color: white;
+}
+.logo{
+     width: 50px;
+     height: 50px;
+
+}
+.search_icon{
+     width: 30px;
+     height: 30px; 
+}
