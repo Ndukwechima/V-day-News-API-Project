@@ -121,7 +121,7 @@ class ApiData extends Component {
               <img
                 src={loadingImage}
                 alt="..."
-                style={{ height: "200px", width: "250px" }}
+                style={{ height: "150px", width: "200px" }}
               />
               <div>Loading...</div>
             </div>
