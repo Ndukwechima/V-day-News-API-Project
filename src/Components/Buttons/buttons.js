@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { countries } from "../countries";
-import Search from "../Search";
+import Search from "../SearchBar/Search.component";
 
 import "../Buttons/Buttons.css";
 
@@ -9,7 +9,7 @@ class Button extends Component {
   render() {
     return (
       <div className="btn-categories">
-        <div>
+        <div className='button_list'>
           <select
             value={this.props.newValue}
             name="Category"
@@ -41,7 +41,7 @@ class Button extends Component {
           </select>
           <button className="top-stories">Top Stories</button>
           <button className="current-news">Current News</button>
-          <button className="old-news">Old News</button>
+          {/* <button className="old-news">Old News</button> */}
         </div>
         <div style={{ marginLeft: "auto", marginRight: "10px" }}>
           <Search searchValue={this.props.searchValue} />

@@ -110,6 +110,7 @@ class ApiData extends Component {
               height: "400px",
               width: "100%",
               display: "flex",
+              flexWrap:'wrap',
               justifyContent: "center",
               alignItems: "center",
               backgroundColor: "#fafaf5"
@@ -125,7 +126,9 @@ class ApiData extends Component {
               />
               <div>Loading...</div>
             </div>
-            <Aside />
+            <div style={{flexBasis:'30%'}}>
+          <Aside />
+          </div>
           </div>
         </div>
       );
@@ -140,6 +143,7 @@ class ApiData extends Component {
       <section>
         {" "}
         <Button
+        style={{flexWrap: 'wrap', height: 'max-content'}}
           value={this.state.value}
           handleChange={this.handleChange}
           searchValue={this.searchedValue}
@@ -151,8 +155,9 @@ class ApiData extends Component {
         <main
           style={{
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: "center",
             width: "100%",
+            flexWrap:'wrap',
             marginTop: "10px"
           }}
         >
@@ -160,10 +165,11 @@ class ApiData extends Component {
             style={{
               height: "90vh",
               overflow: "scroll",
-              width: "70%",
+              flexBasis: "70%",
               display: "flex",
-              justifyContent: "space-around",
-              flexWrap: "wrap"
+              justifyContent: "center",
+              flexWrap: "wrap",
+
             }}
           >
             {/**mapping through the already fetched data in the state to display desired information */}
@@ -173,9 +179,11 @@ class ApiData extends Component {
                 <div
                   key={Math.random()}
                   style={{
-                    width: "35%",
+                    flexBasis:'60%',
+                    // width: "max-content",
                     height: "max-content",
-                    margin: "10px"
+                    textAlign:'center',
+                    margin: "10px",
                   }}
                 >
                   <div style={{ width: "100%", boxShadow: "5px 5px 2px gray" }}>
@@ -215,7 +223,9 @@ class ApiData extends Component {
               );
             })}
           </div>
+          <div style={{flexBasis:'30%'}}>
           <Aside />
+          </div>
         </main>
       </section>
     );

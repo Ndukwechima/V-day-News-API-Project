@@ -20,14 +20,14 @@ const fadeProperties = {
 
 const Slideshow = () => {
   return (
-    <div className="slide-container">
+    <div className="slide-container" style={{maxWidth:'300px',  margin:'auto'}}>
       <Fade {...fadeProperties}>
         <div className="each-fade">
           <div className="image-container">
             <img
               src={fadeImages[0]}
               alt=""
-              style={{ width: "300px", height: "250px" }}
+              style={{ maxWidth: "300px", height: "250px" }}
             />
           </div>
         </div>
@@ -37,17 +37,17 @@ const Slideshow = () => {
             <img
               src={fadeImages[1]}
               alt=""
-              style={{  width: "300px", height: "250px" }}
+              style={{  maxWidth: "300px", height: "250px" }}
             />
           </div>
         </div>
 
-        <div className="each-fade">
+        <div className="each-fade" >
           <div className="image-container">
             <img
-              src={fadeImages[2]}
+              // src={fadeImages[2]}
               alt=""
-              style={{  width: "300px", height: "250px"  }}
+              style={{  maxWidth: "300px", height: "250px"  }}
             />
           </div>
         </div>

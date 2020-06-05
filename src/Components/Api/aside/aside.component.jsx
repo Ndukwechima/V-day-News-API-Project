@@ -6,7 +6,8 @@ export default function Aside() {
   return (
     <aside
       style={{
-        width: "30%",
+        // width: "30%",
+        textAlign:'center',
         backgroundColor: "#f4f4e9",
         padding: "5px"
       }}
