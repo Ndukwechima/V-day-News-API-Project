@@ -2,8 +2,11 @@ import React from "react";
 import { Fade } from "react-slideshow-image";
 
 //importing slideshowimages
-import img1 from "../../Assets/globe.jpg";
-import img2 from "../../Assets/water.jpg";
+import img1 from "../../Assets/water.jpg";
+import img2 from "../../Assets/1.jpg";
+import img3 from "../../Assets/scitech.jpg";
+
+
 
 // import Button from "../Buttons/buttons";
 import ApiData from "../Api/api";
@@ -11,7 +14,7 @@ import ApiData from "../Api/api";
 
 import "./body.css";
 
-const fadeImages = [img1, img2];
+const fadeImages = [img1, img2, img3];
 
 const fadeProperties = {
   duration: 50000,
@@ -32,7 +35,7 @@ const Body = () => {
                   src={fadeImages[0]}
                   alt=""
                   style={{ width: "100%", height: "400px" }}
-                />
+                /> 
               </div>
             </div>
 
@@ -45,9 +48,18 @@ const Body = () => {
                 />
               </div>
             </div>
+             <div className="each-fade">
+              <div className="image-container">
+                <img
+                  src={fadeImages[2]}
+                  alt=""
+                  style={{ width: "100%", height: "400px" }}
+                />
+              </div>
+            </div> 
           </Fade>
         </div>
-              {/* <Menu /> */}
+        {/* <Menu /> */}
       </div>
 
       {/* <Button /> */}

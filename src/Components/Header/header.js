@@ -12,8 +12,8 @@ const Header = () => {
           <img className="logo" src={Pics} alt="pic" />
         </div>
         <div className='site_name'>
-          <h3>VICTORY-DAY</h3>
-          <h3>WORLD NEWS</h3>
+          <h3 className='title1'>VICTORY-DAY</h3>
+          <h3 className='title2' >WORLD NEWS</h3>
         </div>
       </div>
     </div>

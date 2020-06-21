@@ -15,26 +15,32 @@ class ApiData extends Component {
     dataLoaded: false,
     value: "",
     country: "NG",
-    category:'business',
+    category: "Health",
     searchValue: ""
   };
 
   async componentDidMount() {
     // let url = `https://newsapi.org/v2/top-headlines?country=${this.state.country}&apiKey=${API_KEY}`;
-    let url  =`http://newsapi.org/v2/top-headlines?country=${this.state.country}&category=${this.state.category}&apiKey=${API_KEY}`
+    let url = `http://newsapi.org/v2/top-headlines?country=${this.state.country}&category=${this.state.category}&apiKey=${API_KEY}`;
     let req = new Request(url);
     const res = await fetch(req);
     const data = await res.json();
 
-    this.setState({
-      dataLoaded: true,
-      allNewsData: data
-    }, ()=> console.log(this.state.allNewsData));
+    this.setState(
+      {
+        dataLoaded: true,
+        allNewsData: data
+      }
+      // ()=> console.log(this.state.allNewsData)
+    );
   }
 
   //this async/await lifecycle triggers when a value is entered and searched
   async componentDidUpdate(prevProps, prevState) {
-    if (prevState.country !== this.state.country || prevState.category !== this.state.category) {
+    if (
+      prevState.country !== this.state.country ||
+      prevState.category !== this.state.category
+    ) {
       this.setState({ dataLoaded: false });
       const response = await fetch(
         `http://newsapi.org/v2/top-headlines?country=${this.state.country}&category=${this.state.category}&apiKey=${API_KEY}`
@@ -49,15 +55,15 @@ class ApiData extends Component {
     }
   }
 
-  //this function handles the new value entered to the 'search' input tag
+  //this function handles the new value entered to the 'search' input tag for country select
   handleChange = ({ target: { value, name } }) => {
-    this.setState(
-      {
-        [name]: value
-      },
-      () => this.updateSearch()
-    );
+    this.setState({ [name]: value }, () => this.updateSearch());
     console.log(`${[name]}:${value}`);
+  };
+
+  //this function handles the new value entered to the 'search' input tag for category select
+  handleCategory = ({ target: { value } }) => {
+    this.setState({ category: value }, () => console.log(this.state.category));
   };
 
   //Supper algorithm, thanks to Chibuike and George, we got this algorithm from Chibuike written by George
@@ -83,11 +89,12 @@ class ApiData extends Component {
   updateSearch = () => {
     if (!this.state.value) return;
     this.setState({
-      country: this.matchQuery(),
+      country: this.matchQuery()
     });
     console.log(this.state.country);
   };
 
+  //his function gts the input value from button componenet and update the state with it.
   searchedValue = ({ target: { value } }) => {
     this.setState({ searchValue: value }, console.log(this.state.searchValue));
   };
@@ -99,18 +106,17 @@ class ApiData extends Component {
       allNewsData: { articles }
     } = this.state;
 
-    
-
+    //this scren displays while the news content is still loading and disappears as soon as the content is loaded
     if (!dataLoaded) {
       return (
-        <div>
+        <div style={{ height: "max-content" }}>
           <Button />
           <div
             style={{
-              height: "400px",
+              height: "500px",
               width: "100%",
               display: "flex",
-              flexWrap:'wrap',
+              flexWrap: "wrap",
               justifyContent: "center",
               alignItems: "center",
               backgroundColor: "#fafaf5"
@@ -126,15 +132,15 @@ class ApiData extends Component {
               />
               <div>Loading...</div>
             </div>
-            <div style={{flexBasis:'30%'}}>
-          <Aside />
-          </div>
+            <div style={{ flexBasis: "30%" }}>
+              <Aside />
+            </div>
           </div>
         </div>
       );
     }
 
-    let filteredNews = articles.filter(article => 
+    let filteredNews = articles.filter(article =>
       article.title.toLowerCase().includes(searchValue.toLowerCase())
     );
     console.log(articles);
@@ -142,22 +148,20 @@ class ApiData extends Component {
     return (
       <section>
         {" "}
+        {/* this Button was imported from button.jsx and we passed props to it to get the values w used to update our state(country and category)*/}
         <Button
-        style={{flexWrap: 'wrap', height: 'max-content'}}
+          style={{ flexWrap: "wrap", height: "max-content" }}
           value={this.state.value}
+          handleCategory={this.handleCategory}
           handleChange={this.handleChange}
           searchValue={this.searchedValue}
-
-          // searchCategory={this.searchCategory}
-          // handleCate={this.handleCate}
-          newValue={this.state.category}
         />
         <main
           style={{
             display: "flex",
             justifyContent: "center",
             width: "100%",
-            flexWrap:'wrap',
+            flexWrap: "wrap",
             marginTop: "10px"
           }}
         >
@@ -168,8 +172,7 @@ class ApiData extends Component {
               flexBasis: "70%",
               display: "flex",
               justifyContent: "center",
-              flexWrap: "wrap",
-
+              flexWrap: "wrap"
             }}
           >
             {/**mapping through the already fetched data in the state to display desired information */}
@@ -179,11 +182,11 @@ class ApiData extends Component {
                 <div
                   key={Math.random()}
                   style={{
-                    flexBasis:'60%',
+                    flexBasis: "60%",
                     // width: "max-content",
                     height: "max-content",
-                    textAlign:'center',
-                    margin: "10px",
+                    textAlign: "center",
+                    margin: "10px"
                   }}
                 >
                   <div style={{ width: "100%", boxShadow: "5px 5px 2px gray" }}>
@@ -223,8 +226,8 @@ class ApiData extends Component {
               );
             })}
           </div>
-          <div style={{flexBasis:'30%'}}>
-          <Aside />
+          <div style={{ flexBasis: "30%" }}>
+            <Aside />
           </div>
         </main>
       </section>

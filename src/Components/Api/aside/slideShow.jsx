@@ -1,11 +1,18 @@
 import React from "react";
 import { Fade } from "react-slideshow-image";
 
-import img1 from "../../../Assets/polit.jpeg";
-import img2 from "../../../Assets/trump.jpg";
-import img3 from "../../../Assets/too.png";
+// import img1 from "../../../Assets/vee-Techn.jpeg";
+import img1 from "../../../Assets/trump.jpg";
+import img2 from "../../../Assets/messi.jpeg";
+import img3 from "../../../Assets/pogba.jpg";
+import img4 from "../../../Assets/education.jpg";
+import img5 from "../../../Assets/america.jpg";
+import img6 from "../../../Assets/Healthy-Fruits.jpg";
 
-const fadeImages = [img1, img2, img3];
+
+
+
+const fadeImages = [img1, img2, img3, img4, img5, img6];
 
 const fadeProperties = {
   duration: 5000,
@@ -45,7 +52,34 @@ const Slideshow = () => {
         <div className="each-fade" >
           <div className="image-container">
             <img
-              // src={fadeImages[2]}
+               src={fadeImages[2]}
+              alt=""
+              style={{  maxWidth: "300px", height: "250px"  }}
+            />
+          </div>
+        </div>
+        <div className="each-fade" >
+          <div className="image-container">
+            <img
+               src={fadeImages[3]}
+              alt=""
+              style={{  maxWidth: "300px", height: "250px"  }}
+            />
+          </div>
+        </div>
+        <div className="each-fade" >
+          <div className="image-container">
+            <img
+               src={fadeImages[4]}
+              alt=""
+              style={{  maxWidth: "300px", height: "250px"  }}
+            />
+          </div>
+        </div>
+        <div className="each-fade" >
+          <div className="image-container">
+            <img
+               src={fadeImages[5]}
               alt=""
               style={{  maxWidth: "300px", height: "250px"  }}
             />

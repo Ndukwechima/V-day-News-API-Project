@@ -11,15 +11,19 @@ class Button extends Component {
       <div className="btn-categories">
         <div className='button_list'>
           <select
-            value={this.props.newValue}
+            value={this.props.value}
             name="Category"
-            onChange={this.props.handleChange}
+            onChange={this.props.handleCategory}
             className="category"
           >
             <option >Categories</option>
-            <option>Business </option>
+            <option> Business </option>
             <option> Sports </option>
-            <option> Polities </option>
+            <option> Entertainment </option>
+            <option> Technology </option>
+            <option> Science </option>
+            <option> Health </option>
+            <option> General </option>
           </select>
 
           <select
@@ -39,10 +43,10 @@ class Button extends Component {
               </option>
             ))}
           </select>
-          <button className="top-stories">Top Stories</button>
+          {/* <button className="top-stories">Top Stories</button>
           <button className="current-news">Current News</button>
-          {/* <button className="old-news">Old News</button> */}
-        </div>
+          <button className="old-news">Old News</button>*/}
+        </div> 
         <div style={{ marginLeft: "auto", marginRight: "10px" }}>
           <Search searchValue={this.props.searchValue} />
         </div>
