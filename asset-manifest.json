@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.29b6f6ba.chunk.css",
+    "main.js": "/static/js/main.57e46208.chunk.js",
+    "main.js.map": "/static/js/main.57e46208.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.745c920d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.745c920d.js.map",
+    "static/js/2.01d75208.chunk.js": "/static/js/2.01d75208.chunk.js",
+    "static/js/2.01d75208.chunk.js.map": "/static/js/2.01d75208.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.441df4ac75e30bbe1678a4bc38ffa76b.js": "/precache-manifest.441df4ac75e30bbe1678a4bc38ffa76b.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.29b6f6ba.chunk.css.map": "/static/css/main.29b6f6ba.chunk.css.map",
+    "static/js/2.01d75208.chunk.js.LICENSE.txt": "/static/js/2.01d75208.chunk.js.LICENSE.txt",
+    "static/media/1.jpg": "/static/media/1.128bb311.jpg",
+    "static/media/Healthy-Fruits.jpg": "/static/media/Healthy-Fruits.67722d2a.jpg",
+    "static/media/america.jpg": "/static/media/america.0533f6e9.jpg",
+    "static/media/education.jpg": "/static/media/education.61e28ebe.jpg",
+    "static/media/loading3.gif": "/static/media/loading3.6621337c.gif",
+    "static/media/messi.jpeg": "/static/media/messi.1af601bb.jpeg",
+    "static/media/pogba.jpg": "/static/media/pogba.96a380eb.jpg",
+    "static/media/scitech.jpg": "/static/media/scitech.68dcd7b6.jpg",
+    "static/media/too.png": "/static/media/too.e17c059f.png",
+    "static/media/trump.jpg": "/static/media/trump.47dd0789.jpg",
+    "static/media/water.jpg": "/static/media/water.7c49a0fe.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.745c920d.js",
+    "static/js/2.01d75208.chunk.js",
+    "static/css/main.29b6f6ba.chunk.css",
+    "static/js/main.57e46208.chunk.js"
+  ]
+}
