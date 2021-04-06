@@ -13,28 +13,6 @@
    }
 
    
-   /* .category {
-     height: 30px;
-     width: 100px;
-     border: 1px solid white;
-     font-size: 18px;
-     margin-top: 230px;
-     color: #f37521;
-     border-radius: 5px;
-   }
-   .category:hover {
-     color: white;
-   }
-   .country {
-     height: 30px;
-     width: 100px;
-     border: 1px solid white;
-     background-color: #f37521;
-     margin: 10px;
-     color: white;
-     font-size: 18px;
-     border-radius: 5px;
-   } */
    
    .menu {
      display: flex;
